@@ -81,6 +81,12 @@
   </div>
 </section>
 
+<!-- 
+Unless those elements are present, 
+vite will not bundle in the app the necessary classes and images
+-->
+<img hidden src="images/bg-shorten-desktop.svg" alt="" />
+<img hidden src="images/bg-shorten-mobile.svg" alt="" />
 <label hidden>
   <input hidden class="form_failed" />
   <p hidden class="form_failed" />

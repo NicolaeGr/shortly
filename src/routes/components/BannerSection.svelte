@@ -5,6 +5,13 @@
   </div>
 </section>
 
+<!-- 
+Unless those elements are present, 
+vite will not bundle in the app the necessary classes and images
+-->
+<img hidden src="images/bg-boost-desktop.svg" alt="" />
+<img hidden src="images/bg-boost-mobile.svg" alt="" />
+
 <style>
   section {
     position: relative;
