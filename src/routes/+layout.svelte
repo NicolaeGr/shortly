@@ -1,5 +1,7 @@
 <script lang="ts">
   import '../app.css';
+
+  let isMenuOpen: boolean = false;
 </script>
 
 <header>
@@ -15,6 +17,28 @@
     <div class="left">
       <button class="login">Login</button>
       <button class="signup">Sign Up</button>
+    </div>
+    <div
+      class="menu"
+      on:keydown={null}
+      on:click={() => {
+        isMenuOpen = !isMenuOpen;
+      }}
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+      </svg>
+
+      {#if isMenuOpen}
+        <nav class="floating_nav">
+          <div class="link">Features</div>
+          <div class="link">Pricing</div>
+          <div class="link">Resources</div>
+          <hr />
+          <button class="login">Login</button>
+          <button class="signup">Sign Up</button>
+        </nav>
+      {/if}
     </div>
   </div>
 </header>
@@ -127,6 +151,11 @@
     background-color: var(--color-primary-cyen);
   }
 
+  header .floating_nav,
+  header .menu {
+    display: none;
+  }
+
   footer {
     background-color: var(--color-neutral-very-dark-violet);
   }
@@ -172,5 +201,75 @@
   footer .socials {
     gap: 24px;
     align-items: start;
+  }
+
+  @media (max-width: 880px) {
+    header .right nav,
+    header .left {
+      display: none;
+    }
+
+    footer .socials {
+      flex-direction: column;
+    }
+
+    header .menu {
+      display: flex;
+    }
+
+    header .floating_nav {
+      position: absolute;
+      inset: 0px;
+      top: 120px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+
+      min-height: 320px;
+      padding: 16px;
+
+      color: white;
+      background-color: var(--color-primary-dark-violet);
+
+      border-radius: 12px;
+
+      z-index: 1000;
+    }
+
+    header .floating_nav hr {
+      width: 100%;
+      color: var(--color-neutral-grayish-violet);
+    }
+
+    header .floating_nav .login {
+      color: white;
+    }
+
+    header .floating_nav .signup {
+      width: 320px;
+    }
+  }
+
+  @media (max-width: 780px) {
+    footer .container {
+      flex-direction: column;
+      gap: 32px;
+    }
+  }
+
+  @media (max-width: 680px) {
+    footer nav {
+      flex-direction: column;
+    }
+
+    footer .link_category {
+      align-items: center;
+    }
+
+    footer .socials {
+      flex-direction: row;
+    }
   }
 </style>
