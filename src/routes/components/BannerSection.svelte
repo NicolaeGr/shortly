@@ -16,7 +16,7 @@ vite will not bundle in the app the necessary classes and images
   section {
     position: relative;
     background-color: var(--color-primary-dark-violet);
-    background-image: url('images/bg-boost-desktop.svg');
+    background-image: url('https://shortly.nicolaegrosu.me/images/bg-boost-desktop.svg');
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -49,7 +49,7 @@ vite will not bundle in the app the necessary classes and images
     }
 
     section {
-      background-image: url('images/bg-boost-mobile.svg');
+      background-image: url('https://shortly.nicolaegrosu.me/images/bg-boost-mobile.svg');
     }
   }
 </style>
