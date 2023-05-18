@@ -175,4 +175,29 @@
     font-style: italic;
     color: var(--color-secundary-red);
   }
+
+  @media (max-width: 680px) {
+    .container {
+      align-items: center;
+    }
+
+    form {
+      flex-direction: column;
+      gap: 32px;
+      padding: 24px;
+
+      background-image: url('images/bg-shorten-mobile.svg');
+      max-width: 400px;
+      width: 100%;
+    }
+
+    form label {
+      flex: unset;
+      width: 100%;
+    }
+
+    form button {
+      width: 100%;
+    }
+  }
 </style>

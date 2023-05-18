@@ -35,4 +35,14 @@
     border-radius: 32px;
     background-color: var(--color-primary-cyen);
   }
+
+  @media (max-width: 680px) {
+    h2 {
+      font-size: 2rem;
+    }
+
+    section {
+      background-image: url('images/bg-boost-mobile.svg');
+    }
+  }
 </style>

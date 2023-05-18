@@ -42,6 +42,8 @@
     border-radius: 8px;
 
     font-size: 1rem;
+
+    overflow: hidden;
   }
 
   .link_card > div {
@@ -67,5 +69,44 @@
 
   button.clicked {
     background-color: var(--color-neutral-very-dark-violet);
+  }
+
+  @media (max-width: 680px) {
+    .link_card {
+      flex-direction: column;
+      height: unset;
+      max-width: 400px;
+      padding: 16px;
+    }
+
+    .full_link,
+    .shortened_link,
+    button {
+      width: 100%;
+    }
+
+    .link_card > div {
+      position: relative;
+      flex-direction: column;
+      width: 100%;
+      gap: 8px;
+
+      margin-top: 16px;
+    }
+
+    .link_card > div ::before {
+      content: '';
+      position: absolute;
+      width: calc(100% + 32px);
+      height: 1px;
+      top: -4px;
+      left: -16px;
+      right: -16px;
+      background-color: var(--color-neutral-grayish-violet);
+    }
+
+    button {
+      padding: 8px 0px;
+    }
   }
 </style>

@@ -135,4 +135,34 @@
     font-size: 0.9rem;
     color: var(--color-neutral-grayish-violet);
   }
+
+  @media (max-width: 880px) {
+    .header h2 {
+      font-size: 2rem;
+      margin: 0px;
+    }
+
+    .card_wrapper {
+      flex-direction: column;
+    }
+
+    .card_wrapper::after {
+      width: 8px;
+      height: calc(100% - 88px);
+      margin: auto;
+      top: 88px;
+      left: 50%;
+      background-color: var(--color-primary-cyen);
+      opacity: 0.9;
+      z-index: 0;
+    }
+
+    .card,
+    .card.c1,
+    .card.c2,
+    .card.c3 {
+      max-width: 400px;
+      margin-top: 88px;
+    }
+  }
 </style>

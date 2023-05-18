@@ -58,3 +58,9 @@ button:hover {
   max-width: 1150px;
   height: 100%;
 }
+
+@media (max-width: 1080px) {
+  body {
+    font-size: 16px;
+  }
+}
