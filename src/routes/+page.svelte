@@ -8,3 +8,5 @@
 <HeroSection />
 
 <ShortenLinksSection />
+
+<BannerSection />
