@@ -9,4 +9,6 @@
 
 <ShortenLinksSection />
 
+<FeaturesSection />
+
 <BannerSection />
